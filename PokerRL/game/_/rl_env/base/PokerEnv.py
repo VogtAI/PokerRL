@@ -895,6 +895,7 @@ class PokerEnv:
                         or  [Poker.BET_RAISE, total_bet_to_be_placed_in_front_by_player]
 
         """
+        print("action", action)
         _action_idx = 0
         if type(action) is int:
             _action_idx = action

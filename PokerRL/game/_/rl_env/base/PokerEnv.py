@@ -895,7 +895,11 @@ class PokerEnv:
                         or  [Poker.BET_RAISE, total_bet_to_be_placed_in_front_by_player]
 
         """
-        _action_idx = action[0]
+        _action_idx = 0
+        if type(action) is int:
+            _action_idx = action
+        else:
+            _action_idx = action[0]
 
         total_to_call = self._get_biggest_bet_out_there_aka_total_to_call()
 

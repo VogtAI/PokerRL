@@ -27,7 +27,7 @@ class VanillaWrapper(Wrapper):
     def get_current_obs(self, env_obs=None):
         if not (env_obs is None):
             return env_obs
-        return self.env.get_current_obs()
+        return self.env.get_current_obs(is_terminal=False)
 
     def state_dict(self):
         return {

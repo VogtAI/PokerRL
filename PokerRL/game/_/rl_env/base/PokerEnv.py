@@ -3,6 +3,7 @@
 
 import copy
 import time
+import sys
 
 import numpy as np
 from gym import spaces
@@ -895,6 +896,7 @@ class PokerEnv:
                         or  [Poker.BET_RAISE, total_bet_to_be_placed_in_front_by_player]
 
         """
+        print sys._getframe().f_back.f_code.co_name
         print("action", action)
         _action_idx = 0
         if type(action) is int:
